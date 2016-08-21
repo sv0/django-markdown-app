@@ -1,3 +1,6 @@
+2016-07-24  sv0
+	* Add Django 1.10 support
+
 2014-12-08  wldcordeiro
 	* Fixing the static loading issue properly.
 	* version 0.8.2
