@@ -17,20 +17,20 @@ The reason of forking is the original project is not maintained anymore and the 
     :target: https://travis-ci.org/sv0/django-markdown-utils
     :alt: Build Status
 
-.. image:: http://img.shields.io/coveralls/klen/django_markdown.svg?style=flat-square
-    :target: https://coveralls.io/r/klen/django_markdown
+.. image:: https://coveralls.io/repos/github/sv0/django-markdown-utils/badge.svg?branch=master
+    :target: https://coveralls.io/github/sv0/django-markdown-utils?branch=master
     :alt: Coverals
 
-.. image:: http://img.shields.io/pypi/v/django_markdown.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django_markdown
+.. image:: http://img.shields.io/pypi/v/django-markdown-utils.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/django-markdown-utils
     :alt: Version
 
-.. image:: http://img.shields.io/pypi/dm/django_markdown.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django_markdown
+.. image:: http://img.shields.io/pypi/dm/django-markdown-utils.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/django-markdown-utils
     :alt: Downloads
 
-.. image:: http://img.shields.io/pypi/l/django_markdown.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django_markdown
+.. image:: http://img.shields.io/pypi/l/django-markdown-utils.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/django-markdown-utils
     :alt: License
 
 .. image:: http://img.shields.io/gratipay/klen.svg?style=flat-square
@@ -56,7 +56,7 @@ Installation
 
 **Django markdown** should be installed using pip: ::
 
-    pip install django-markdown
+    pip install django-markdown-utils
 
 
 Setup
@@ -162,7 +162,7 @@ Changes
 
 Make sure you`ve read the following document if you are upgrading from previous versions:
 
-http://packages.python.org/django-markdown/changes.html
+http://packages.python.org/django-markdown-utils/changes.html
 
 
 Bug tracker
@@ -170,17 +170,17 @@ Bug tracker
 
 If you have any suggestions, bug reports or
 annoyances please report them to the issue tracker
-at https://github.com/klen/django_markdown/issues
+at https://github.com/sv0/django-markdown-utils/issues
 
 
 Contributing
 ============
 
-Development of django-markdown happens at github: https://github.com/klen/django_markdown
+Development of django-markdown happens at github: https://github.com/sv0/django-markdown-utils
 
 
 Contributors
-=============
+============
 
 * klen_ (Kirill Klenov)
 
