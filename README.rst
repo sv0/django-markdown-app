@@ -13,24 +13,24 @@ The reason of forking is the original project is not maintained anymore and the 
 
 .. _badges:
 
-.. image:: https://travis-ci.org/sv0/django-markdown-utils.svg?branch=master
-    :target: https://travis-ci.org/sv0/django-markdown-utils
+.. image:: https://travis-ci.org/sv0/django-markdown-app.svg?branch=master
+    :target: https://travis-ci.org/sv0/django-markdown-app
     :alt: Build Status
 
-.. image:: https://coveralls.io/repos/github/sv0/django-markdown-utils/badge.svg?branch=master
-    :target: https://coveralls.io/github/sv0/django-markdown-utils?branch=master
+.. image:: https://coveralls.io/repos/github/sv0/django-markdown-app/badge.svg?branch=master
+    :target: https://coveralls.io/github/sv0/django-markdown-app?branch=master
     :alt: Coverals
 
-.. image:: http://img.shields.io/pypi/v/django-markdown-utils.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django-markdown-utils
+.. image:: http://img.shields.io/pypi/v/django-markdown-app.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/django-markdown-app
     :alt: Version
 
-.. image:: http://img.shields.io/pypi/dm/django-markdown-utils.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django-markdown-utils
+.. image:: http://img.shields.io/pypi/dm/django-markdown-app.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/django-markdown-app
     :alt: Downloads
 
-.. image:: http://img.shields.io/pypi/l/django-markdown-utils.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django-markdown-utils
+.. image:: http://img.shields.io/pypi/l/django-markdown-app.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/django-markdown-app
     :alt: License
 
 .. image:: http://img.shields.io/gratipay/klen.svg?style=flat-square
@@ -56,7 +56,7 @@ Installation
 
 **Django markdown** should be installed using pip: ::
 
-    pip install django-markdown-utils
+    pip install django-markdown-app
 
 
 Setup
@@ -162,7 +162,7 @@ Changes
 
 Make sure you`ve read the following document if you are upgrading from previous versions:
 
-http://packages.python.org/django-markdown-utils/changes.html
+http://packages.python.org/django-markdown-app/changes.html
 
 
 Bug tracker
@@ -170,13 +170,13 @@ Bug tracker
 
 If you have any suggestions, bug reports or
 annoyances please report them to the issue tracker
-at https://github.com/sv0/django-markdown-utils/issues
+at https://github.com/sv0/django-markdown-app/issues
 
 
 Contributing
 ============
 
-Development of django-markdown happens at github: https://github.com/sv0/django-markdown-utils
+Development of django-markdown happens at github: https://github.com/sv0/django-markdown-app
 
 
 Contributors
