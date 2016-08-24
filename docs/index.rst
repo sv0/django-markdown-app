@@ -1,8 +1,13 @@
-django-markdown
-###############
+django-markdown-app
+###################
 
 **Django markdown** is django application that allows use markdown wysiwyg in flatpages, admin forms and other forms.
 Documentaton available at pypi_ or github_.
+
+It's a fork of https://github.com/klen/django_markdown
+
+The reason of forking is the original project is not maintained anymore and the owner(klen_) is not interested in the merging of the pull requests.
+
 
 .. contents::
 
@@ -19,7 +24,7 @@ Installation
 
 **Django markdown** should be installed using pip: ::
 
-    pip install django-markdown
+    pip install django-markdown-app
 
 
 Setup
@@ -105,7 +110,7 @@ Changes
 
 Make sure you`ve read the following document if you are upgrading from previous versions:
 
-http://packages.python.org/django-markdown/changes.html
+http://packages.python.org/django-markdown-app/changes.html
 
 
 Bug tracker
@@ -113,13 +118,13 @@ Bug tracker
 
 If you have any suggestions, bug reports or
 annoyances please report them to the issue tracker
-at https://github.com/klen/django_markdown/issues
+at https://github.com/sv0/django-markdown-app/issues
 
 
 Contributing
 ============
 
-Development of django-markdown happens at github: https://github.com/klen/django_markdown
+Development of django-markdown-app happens at github: https://github.com/sv0/django-markdown-app
 
 
 Contributors
@@ -147,8 +152,8 @@ Markitup_:
     
 
 .. _GNU lesser general public license: http://www.gnu.org/copyleft/lesser.html
-.. _pypi: http://packages.python.org/django-markdown/
+.. _pypi: http://packages.python.org/django-markdown-app/
 .. _Markitup: http://markitup.jaysalvat.com/ 
-.. _github: https://github.com/klen/django_markdown
+.. _github: https://github.com/sv0/django-markdown-app
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
