@@ -49,10 +49,16 @@ setup(
     keywords='html markdown django',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
+        'Framework :: Django :: 1.6',
+        'Framework :: Django :: 1.7',
+        'Framework :: Django :: 1.8',
+        'Framework :: Django :: 1.9',
+        'Framework :: Django :: 1.10',
         'Intended Audience :: Developers',
         'Natural Language :: English',
-        'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)', # noqa
-        'Programming Language :: Python',
+        'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',  # noqa
+        'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3',
         'Topic :: Software Development :: Code Generators',
         'Topic :: Text Processing :: Markup',
     ],
