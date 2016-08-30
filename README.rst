@@ -204,8 +204,8 @@ Markitup_:
     
 
 .. _GNU lesser general public license: http://www.gnu.org/copyleft/lesser.html
-.. _pypi: http://packages.python.org/django-markdown/
+.. _pypi: http://packages.python.org/django-markdown-app/
 .. _Markitup: http://markitup.jaysalvat.com/ 
-.. _github: https://github.com/klen/django_markdown
+.. _github: https://github.com/sv0/django-markdown-app
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
