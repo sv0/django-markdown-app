@@ -62,8 +62,7 @@ class DjangoMarkdownViewsTest(TestCase):
         from . import settings
         settings.MARKDOWN_PROTECT_PREVIEW = True
 
-        response = self.client.get('/markdown/preview/', data=self.data)
-
+        response = self.client.post('/markdown/preview/', data=self.data)
         self.assertEqual(response.status_code, 302)
 
         # for tests isolation reasons

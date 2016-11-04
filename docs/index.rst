@@ -1,5 +1,7 @@
-django-markdown-app
-###################
+Django-Markdown v. 0.9.0
+########################
+
+.. _description:
 
 **Django markdown** is django application that allows use markdown wysiwyg in flatpages, admin forms and other forms.
 Documentaton available at pypi_ or github_.
@@ -11,11 +13,13 @@ The reason of forking is the original project is not maintained anymore and the 
 
 .. contents::
 
+.. _requirements:
+
 Requirements
 ============
 
-- python >= 2.5
-- django >= 1.2
+- python >= 2.7
+- django >= 1.8
 - markdown
 
 
@@ -30,6 +34,9 @@ Installation
 Setup
 =====
 
+.. note:: 'django_markdown' require 'django.contrib.staticfiles' in INSTALLED_APPS
+
+
 - Add 'django_markdown' to INSTALLED_APPS ::
 
     INSTALLED_APPS += ( 'django_markdown', )
@@ -43,16 +50,40 @@ Setup
 Use django_markdown
 ===================
 
+#) Models: ::
+
+    from django_markdown.models import MarkdownField
+    
+    
+    class MyModel(models.Model):
+        content = MarkdownField()
+
+
 #) Custom forms: ::
 
+    from django_markdown.fields import MarkdownFormField
     from django_markdown.widgets import MarkdownWidget
+
+
     class MyCustomForm(forms.Form):
-        content = forms.CharField( widget=MarkdownWidget() )
+        content = forms.CharField(widget=MarkdownWidget())
+        content2 = MarkdownFormField()
+
 
 #) Custom admins: ::
 
     from django_markdown.admin import MarkdownModelAdmin
-    adimin.site.register(MyModel, MarkdownModelAdmin)
+    admin.site.register(MyModel, MarkdownModelAdmin)
+
+
+#) Admin Overrides: (If you don't want to subclass package ModelAdmin's) ::
+
+    from django.contrib import admin
+
+    
+    class YourModelAdmin(admin.ModelAdmin):
+        formfield_overrides = {MarkdownField: {'widget': AdminMarkdownWidget}}
+
 
 #) Flatpages: ::
 
@@ -64,37 +95,17 @@ Use django_markdown
     flatpages.register()
     urlpatterns += [ url(r'^admin/', include(admin.site.urls)), ]
 
-#) JavaScript API: ::
+#) Template tags: ::
 
-    // Editors manager ``miu`` methods
+    <textarea name="test" id="new"></textarea>
+    {% markdown_editor "#new" %}
+    {% markdown_media %}
 
-    // Initialize editor using default settings extended with ``extraSettings``
-    miu.init(textareaId, extraSettings);
-
-    // Get default mIu settings
-    miu.settings();
-
-    // Set default mIu settings
-    miu.settings(newSettings);
-    
-    // Get all initialized aditors
-    miu.editors();
-    
-    // Get certain editor
-    miu.editors(textareaId);
-    
-    
-    // Editor instance methods
-    
-    // Dynamically add button at ``index`` position 
-    editor.addButton(conf, index)
-    
-    // Dynamically remove button at ``index`` position
-    editor.removeButton(index)
-    
 
 Settings
 ========
+
+**MARKDOWN_EDITOR_SETTINGS** - holds the extra parameters set to be passed to ``textarea.markItUp()``
 
 **MARKDOWN_EDITOR_SKIN** - skin option, default value is ``markitup``
 
@@ -102,7 +113,30 @@ Example: `settings.py` ::
 
     MARKDOWN_EDITOR_SKIN = 'simple'
 
-**MARKDOWN_EDITOR_SETTINGS** - holds the extra parameters set to be passed to textarea.markItUp() 
+**MARKDOWN_EXTENSIONS** - optional list of extensions passed to Markdown, discussed at https://pythonhosted.org/Markdown/extensions/index.html#officially-supported-extensions
+
+Example: `settings.py` ::
+
+    MARKDOWN_EXTENSIONS = ['extra']
+
+**MARKDOWN_EXTENSION_CONFIGS** - Configure extensions, discussed at https://pythonhosted.org/Markdown/reference.html#extension_configs
+
+**MARKDOWN_PREVIEW_TEMPLATE** - Template for preview a markdown. By default `django_markdown/preview.css`
+
+**MARKDOWN_STYLE** - path to preview styles. By default `django_markdown/preview.css`
+
+**MARKDOWN_SET_PATH** - path to folder with sets. By default `django_markdown/sets`
+
+**MARKDOWN_SET_NAME** - name for current set. By default `markdown`.
+
+**MARKDOWN_PROTECT_PREVIEW** - protect preview url for staff only
+
+
+Examples
+========
+
+Execute `make run` in sources directory. Open http://127.0.0.1:8000 in your
+browser. For admin access use 'root:root' credentials.
 
 
 Changes
@@ -128,11 +162,11 @@ Development of django-markdown-app happens at github: https://github.com/sv0/dja
 
 
 Contributors
-=============
+============
 
 * klen_ (Kirill Klenov)
 
-* yavorskiy_ (Sergii Iavorskyi) 
+* yavorskiy_ (Sergii Iavorskyi)
 
 
 License
