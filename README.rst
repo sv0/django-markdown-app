@@ -1,4 +1,4 @@
-Django-Markdown v. 0.8.6
+Django-Markdown v. 0.9.0
 ########################
 
 .. _description:
@@ -45,7 +45,7 @@ Requirements
 ============
 
 - python >= 2.7
-- django >= 1.6
+- django >= 1.8
 - markdown
 
 
@@ -80,21 +80,29 @@ Use django_markdown
 #) Models: ::
     
     from django_markdown.models import MarkdownField
+
+
     class MyModel(models.Model):
         content = MarkdownField()
+
 
 #) Custom forms: ::
 
     from django_markdown.fields import MarkdownFormField
     from django_markdown.widgets import MarkdownWidget
+
+
     class MyCustomForm(forms.Form):
         content = forms.CharField(widget=MarkdownWidget())
         content2 = MarkdownFormField()
 
+
 #) Custom admins: ::
 
     from django_markdown.admin import MarkdownModelAdmin
+
     admin.site.register(MyModel, MarkdownModelAdmin)
+
 
 #) Admin Overrides: (If you don't want to subclass package ModelAdmin's) ::
 
@@ -102,6 +110,7 @@ Use django_markdown
 
     class YourModelAdmin(admin.ModelAdmin):
         formfield_overrides = {MarkdownField: {'widget': AdminMarkdownWidget}}
+
 
 #) Flatpages: ::
 
@@ -112,6 +121,7 @@ Use django_markdown
     admin.autodiscover()
     flatpages.register()
     urlpatterns += [ url(r'^admin/', include(admin.site.urls)), ]
+
 
 #) Template tags: ::
 

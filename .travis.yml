@@ -4,9 +4,12 @@ python:
 - "2.7"
 
 env:
-- TOXENV=py27-d16
-- TOXENV=py27-d17
-- TOXENV=py34-d17
+- TOXENV=py27-d18
+- TOXENV=py27-d19
+- TOXENV=py27-d110
+- TOXENV=py35-d18
+- TOXENV=py35-d19
+- TOXENV=py35-d110
 - TOXENV=cov
 
 branches:
