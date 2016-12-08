@@ -2,24 +2,19 @@ language: python
 
 python:
 - "2.7"
-
-env:
-- TOXENV=py27-d16
-- TOXENV=py27-d17
-- TOXENV=py34-d17
-- TOXENV=cov
+- "3.5"
 
 branches:
     only:
     - master
-    - develop
+#    - develop
 
-install: pip install --quiet --use-mirrors tox
+install: pip install tox-travis
 
 script: tox
 
 after_script:
 - if [ $TOXENV == "cov" ]; then
-    pip install --quiet --use-mirrors coveralls;
+    pip install coveralls;
     coveralls;
   fi
