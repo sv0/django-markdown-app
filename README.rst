@@ -3,7 +3,7 @@ Django-Markdown v. 0.9.0
 
 .. _description:
 
-**Django markdown** is django application that allows use markdown wysiwyg in flatpages, admin forms and other forms.
+**Django markdown** is django application that allows use markdown_ wysiwyg in flatpages, admin forms and other forms.
 Documentaton available at pypi_ or github_.
 
 It's a fork of https://github.com/klen/django_markdown
@@ -46,7 +46,7 @@ Requirements
 
 - python >= 2.7
 - django >= 1.8
-- markdown
+- markdown >= 2.6.7
 
 
 .. _installation:
@@ -219,3 +219,4 @@ Markitup_:
 .. _github: https://github.com/sv0/django-markdown-app
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
+.. _markdown: https://pythonhosted.org/Markdown/
