@@ -1,2 +1,2 @@
-django
-markdown
+django>=1.8
+markdown>=2.6.7
