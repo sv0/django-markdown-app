@@ -11,12 +11,14 @@ from django_markdown.widgets import MarkdownWidget
 class DjangoMarkdownTagsTest(TestCase):
 
     def test_markdown_tag(self):
-        html = markdown_tag('| header |\n| ---- |\n| data   |', 'tables')
+        html = markdown_tag('| header 1 | header 2 |\n'
+                            '| ----     | ----     |\n'
+                            '| data     | data     |',
+                            'tables')
 
-        expected = ('<table>\n<thead>\n<tr>\n<th>header</th>'
-                    '\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>data'
-                    '</td>\n</tr>\n</tbody>\n</table>')
-
+        expected = ('<table>\n<thead>\n<tr>\n<th>header 1</th>\n'
+                    '<th>header 2</th>\n</tr>\n</thead>\n<tbody>\n'
+                    '<tr>\n<td>data</td>\n<td>data</td>\n</tr>\n</tbody>\n</table>')
         self.assertEqual(html, expected)
 
 
