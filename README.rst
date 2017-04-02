@@ -163,7 +163,7 @@ Example: `settings.py` ::
 Examples
 ========
 
-Execute `make run` in sources directory. Open http://127.0.0.1:8000 in your
+Execute *make run* in sources directory. Open http://127.0.0.1:8000 in your
 browser. For admin access use 'root:root' credentials.
 
 
