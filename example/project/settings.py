@@ -22,8 +22,6 @@ SECRET_KEY = 'qpd-psx8c+xna6!sg^@k)b3h@=hog+gwpu#z%*^(vat3=d&i1z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-TEMPLATE_DEBUG = True
-
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
