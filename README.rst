@@ -1,4 +1,4 @@
-Django-Markdown v. 0.10.0
+Django-Markdown v. 0.9.1
 ########################
 
 .. _description:
@@ -57,6 +57,13 @@ Installation
 **Django markdown** should be installed using pip: ::
 
     pip install django-markdown-app
+
+
+Prerequisites
+=============
+
+Starting with version 0.9.0, django-markdown-app requires Django 1.8 or later.
+If you need to support Django versions prior to 1.8 please use django-markdown-app 0.8.5.
 
 
 Setup
