@@ -12,6 +12,7 @@ docs/_*
 sitegen.egg-info
 todo.txt
 
+.env
 .coverage
 .tox/
 .cache/

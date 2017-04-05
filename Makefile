@@ -1,6 +1,7 @@
 MODULE=django_markdown
 VIRTUALENV=$(shell echo "$${VDIR:-'.env'}")
 
+
 all: $(VIRTUALENV)
 
 .PHONY: help
@@ -75,7 +76,7 @@ docs:
 
 
 $(VIRTUALENV): requirements.txt
-	[ -d $(VIRTUALENV) ] || @virtualenv --no-site-packages $(VIRTUALENV)
+	[ -d $(VIRTUALENV) ] || virtualenv --no-site-packages $(VIRTUALENV)
 	@$(VIRTUALENV)/bin/pip install -r requirements.txt
 	touch $(VIRTUALENV)
 
@@ -89,7 +90,7 @@ t: clean $(VIRTUALENV)/bin/py.test
 	@$(VIRTUALENV)/bin/py.test
 
 $(CURDIR)/example/db.sqlite3: $(VIRTUALENV)
-	$(VIRTUALENV)/bin/python example/manage.py syncdb --noinput
+	$(VIRTUALENV)/bin/python example/manage.py migrate --noinput
 
 .PHONY: run
 run: $(CURDIR)/example/db.sqlite3
