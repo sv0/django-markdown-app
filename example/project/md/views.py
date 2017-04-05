@@ -6,4 +6,5 @@ from django.views.decorators.csrf import csrf_protect
 def home(request):
     from .forms import CustomForm
     form = CustomForm(request.POST)
-    return render(request, 'md/home.html', {'form': form})
+    context = {'form': form}
+    return render(request, 'md/home.html', context)
