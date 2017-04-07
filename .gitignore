@@ -12,6 +12,9 @@ docs/_*
 sitegen.egg-info
 todo.txt
 
+.env
 .coverage
 .tox/
-django_markdown.egg-info/
+.cache/
+.eggs/
+django_markdown_app.egg-info/

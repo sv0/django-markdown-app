@@ -1,3 +1,7 @@
+2016-11-04  sv0
+	* Remove Django 1.6 and 1.7 support
+	* Version 0.9.0
+
 2016-07-24  sv0
 	* Add Django 1.10 support
 

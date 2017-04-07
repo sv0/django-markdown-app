@@ -13,6 +13,8 @@ DEBUG = True
 
 MEDIA_ROOT = TMPDIR
 
+ALLOWED_HOSTS = ['*']
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',

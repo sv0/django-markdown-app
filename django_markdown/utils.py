@@ -2,7 +2,7 @@
 import markdown as markdown_module
 
 from django.core.urlresolvers import reverse
-from django.template import loader, Context
+from django.template import loader
 from django.utils.encoding import force_text
 from django.utils.safestring import mark_safe
 
@@ -42,7 +42,8 @@ def editor_js_initialization(selector, **extra_settings):
         previewParserPath=reverse('django_markdown_preview'),
         **settings.MARKDOWN_EDITOR_SETTINGS)
     options.update(extra_settings)
-    ctx = Context(dict(
-        selector=selector, extra_settings=simplejson.dumps(options)),
-        autoescape=False)
+    ctx = dict(
+        selector=selector,
+        extra_settings=simplejson.dumps(options)
+    )
     return INIT_TEMPLATE.render(ctx)
