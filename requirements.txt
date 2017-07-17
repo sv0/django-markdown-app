@@ -1,2 +1,2 @@
-Django>=1.8,<=1.11.x
+Django>=1.8,<1.12.*
 markdown>=2.6.7
