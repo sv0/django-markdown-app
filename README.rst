@@ -25,10 +25,6 @@ The reason of forking is the original project is not maintained anymore and the 
     :target: https://pypi.python.org/pypi/django-markdown-app
     :alt: Version
 
-.. image:: http://img.shields.io/pypi/dm/django-markdown-app.svg?style=flat-square
-    :target: https://pypi.python.org/pypi/django-markdown-app
-    :alt: Downloads
-
 .. image:: https://img.shields.io/badge/license-LGPL-blue.svg
     :target: http://www.gnu.org/copyleft/lesser.html
     :alt: License
