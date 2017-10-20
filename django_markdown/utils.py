@@ -1,7 +1,11 @@
 """ Markdown utils. """
 import markdown as markdown_module
 
-from django.urls import reverse
+try:
+    from django.urls import reverse
+except ImportError:  # Compatibility with previous Django version
+    from django.core.urlresolvers import reverse
+
 from django.template import loader
 from django.utils.encoding import force_text
 from django.utils.safestring import mark_safe
