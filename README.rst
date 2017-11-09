@@ -1,4 +1,4 @@
-Django-Markdown v. 0.9.3
+Django-Markdown v. 0.11.0
 ########################
 
 .. _description:
@@ -171,7 +171,7 @@ Changes
 
 Make sure you`ve read the following document if you are upgrading from previous versions:
 
-http://packages.python.org/django-markdown-app/changes.html
+http://django-markdown-app.readthedocs.io/en/latest/changes.html
 
 
 Bug tracker

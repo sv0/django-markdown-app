@@ -48,7 +48,8 @@ class MarkdownWidget(forms.Textarea):
         js = (
             os.path.join('django_markdown', 'jquery.init.js'),
             os.path.join('django_markdown', 'jquery.markitup.js'),
-            os.path.join(settings.MARKDOWN_SET_PATH, settings.MARKDOWN_SET_NAME, 'set.js')
+            os.path.join(settings.MARKDOWN_SET_PATH, settings.MARKDOWN_SET_NAME, 'set.js'),
+            os.path.join('django_markdown', 'editor.js')
         )
 
 
