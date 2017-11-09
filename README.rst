@@ -1,4 +1,4 @@
-Django-Markdown v. 0.9.3
+Django-Markdown v. 0.9.4
 ########################
 
 .. _description:
