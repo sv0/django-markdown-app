@@ -167,11 +167,9 @@ browser. For admin access use 'root:root' credentials.
 
 
 Changes
-=======
+-------
 
-Make sure you`ve read the following document if you are upgrading from previous versions:
-
-http://django-markdown-app.readthedocs.io/en/latest/changes.html
+Make sure you've read the changes_ document if you are upgrading from previous version.
 
 
 Bug tracker
@@ -219,3 +217,4 @@ Markitup_:
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
 .. _markdown: https://pythonhosted.org/Markdown/
+.. _changes: changes.html
