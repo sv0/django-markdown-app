@@ -67,7 +67,6 @@ upload: clean docs
 docs:
 	@pip install sphinx sphinx-pypi-upload
 	@python setup.py build_sphinx --source-dir=docs/ --build-dir=docs/_build --all-files
-	@python setup.py upload_sphinx --upload-dir=docs/_build/html
 
 
 # =============
