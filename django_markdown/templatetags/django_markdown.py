@@ -1,11 +1,18 @@
 """ Support 'markdown' filter. """
 import posixpath
 
+from django import VERSION
+
 from django import template
-from django.core.urlresolvers import reverse
 from django.utils.safestring import mark_safe
 
-from ..utils import markdown as _markdown, settings, simplejson
+from .. utils import markdown as _markdown, settings, simplejson
+
+if VERSION >= (2, 0):
+    from django.urls import reverse
+else:
+    # django <= 1.11 compatibility
+    from django.core.urlresolvers import reverse
 
 
 register = template.Library()

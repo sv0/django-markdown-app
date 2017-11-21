@@ -1,12 +1,19 @@
 """ Markdown utils. """
 import markdown as markdown_module
 
-from django.core.urlresolvers import reverse
+from django import VERSION
 from django.template import loader
 from django.utils.encoding import force_text
 from django.utils.safestring import mark_safe
 
 from . import settings
+
+if VERSION >= (2, 0):
+    from django.urls import reverse
+else:
+    # django <= 1.11 compatibility
+    from django.core.urlresolvers import reverse
+
 
 try:
     import json as simplejson
@@ -35,7 +42,7 @@ def markdown(value, extensions=settings.MARKDOWN_EXTENSIONS,
 def editor_js_initialization(selector, **extra_settings):
     """ Return script tag with initialization code. """
 
-    INIT_TEMPLATE = loader.get_template(
+    init_template = loader.get_template(
         settings.MARKDOWN_EDITOR_INIT_TEMPLATE)
 
     options = dict(
@@ -46,4 +53,4 @@ def editor_js_initialization(selector, **extra_settings):
         selector=selector,
         extra_settings=simplejson.dumps(options)
     )
-    return INIT_TEMPLATE.render(ctx)
+    return init_template.render(ctx)
