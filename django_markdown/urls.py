@@ -1,10 +1,10 @@
 """ Define preview URL. """
 
-from django.conf.urls import url
+from django.urls import path
 
 from .views import preview
 
 
 urlpatterns = [
-    url('preview/$', preview, name='django_markdown_preview')
+    path('preview/', preview, name='django_markdown_preview')
 ]
