@@ -22,6 +22,7 @@ def _read(fname):
     except IOError:
         return ''
 
+
 _meta = _read('django_markdown/__init__.py')
 _license = re.search(r'^__license__\s*=\s*"(.*)"', _meta, re.M).group(1)
 _project = re.search(r'^__project__\s*=\s*"(.*)"', _meta, re.M).group(1)
@@ -49,15 +50,13 @@ setup(
     keywords='html markdown django',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
-        'Framework :: Django :: 1.8',
-        'Framework :: Django :: 1.9',
-        'Framework :: Django :: 1.10',
-        'Framework :: Django :: 1.11',
+        'Framework :: Django :: 2.0',
         'Intended Audience :: Developers',
         'Natural Language :: English',
         'License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)',  # noqa
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.6',
+        'Programming Language :: Python :: 3.7',
         'Topic :: Software Development :: Code Generators',
         'Topic :: Text Processing :: Markup',
     ],
