@@ -75,7 +75,7 @@ docs:
 
 
 $(VIRTUALENV): requirements.txt
-	[ -d $(VIRTUALENV) ] || virtualenv --no-site-packages $(VIRTUALENV)
+	[ -d $(VIRTUALENV) ] || virtualenv -p `which python3` --no-site-packages $(VIRTUALENV)
 	@$(VIRTUALENV)/bin/pip install -r requirements.txt
 	touch $(VIRTUALENV)
 
