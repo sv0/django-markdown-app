@@ -36,9 +36,9 @@ The reason of forking is the original project is not maintained anymore and the 
 Requirements
 ============
 
-- python >= 2.7
-- django >= 1.8
-- markdown >= 2.6.7
+- python >= 3.6
+- django >= 2.0
+- markdown >= 2.6.11
 
 
 .. _installation:
@@ -77,7 +77,7 @@ Use django_markdown
 ===================
 
 #) Models: ::
-    
+
     from django_markdown.models import MarkdownField
 
 
@@ -140,15 +140,18 @@ Example: `settings.py` ::
 
     MARKDOWN_EDITOR_SKIN = 'simple'
 
-**MARKDOWN_EXTENSIONS** - optional list of extensions passed to Markdown, discussed at https://pythonhosted.org/Markdown/extensions/index.html#officially-supported-extensions
+**MARKDOWN_EXTENSIONS** - optional list of extensions passed to Markdown.
+
+Officially supported extensions could be found
+at https://python-markdown.github.io/extensions/#officially-supported-extensions
 
 Example: `settings.py` ::
 
     MARKDOWN_EXTENSIONS = ['extra']
 
-**MARKDOWN_EXTENSION_CONFIGS** - Configure extensions, discussed at https://pythonhosted.org/Markdown/reference.html#extension_configs
+**MARKDOWN_EXTENSION_CONFIGS** - configure extensions
 
-**MARKDOWN_PREVIEW_TEMPLATE** - Template for preview a markdown. By default `django_markdown/preview.css`
+**MARKDOWN_PREVIEW_TEMPLATE** - template for preview a markdown. By default `django_markdown/preview.css`
 
 **MARKDOWN_STYLE** - path to preview styles. By default `django_markdown/preview.css`
 
@@ -207,14 +210,14 @@ Copyright (c) 2011 Kirill Klenov (horneds@gmail.com)
 
 Markitup_:
     (c) 2008 Jay Salvat
-    http://markitup.jaysalvat.com/ 
-    
+    http://markitup.jaysalvat.com/
+
 
 .. _GNU lesser general public license: http://www.gnu.org/copyleft/lesser.html
 .. _readthedocs: http://django-markdown-app.readthedocs.io
-.. _Markitup: http://markitup.jaysalvat.com/ 
+.. _Markitup: http://markitup.jaysalvat.com/
 .. _github: https://github.com/sv0/django-markdown-app
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
-.. _markdown: https://pythonhosted.org/Markdown/
+.. _markdown: https://python-markdown.github.io
 .. _changes: changes.html
