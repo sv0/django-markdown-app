@@ -1,14 +1,10 @@
-Django-Markdown v. 0.9.4
-########################
+Django-Markdown v. 0.9.4.1
+##########################
 
 .. _description:
 
 **Django markdown** is django application that allows use markdown_ wysiwyg in flatpages, admin forms and other forms.
 Documentaton available at readthedocs_ or github_.
-
-It's a fork of https://github.com/klen/django_markdown
-
-The reason of forking is the original project is not maintained anymore and the owner(klen_) is not interested in the merging of the pull requests.
 
 
 .. _badges:
@@ -36,7 +32,6 @@ The reason of forking is the original project is not maintained anymore and the 
 Requirements
 ============
 
-- python >= 3.6
 - django >= 2.0
 - markdown >= 2.6.11
 
@@ -51,11 +46,18 @@ Installation
     pip install django-markdown-app
 
 
-Prerequisites
-=============
+Version compatibility
+=====================
 
-Starting with version 0.9.0, django-markdown-app requires Django 1.8 or later.
-If you need to support Django versions prior to 1.8 please use django-markdown-app 0.8.5.
+Starting with version 0.9.4.1, django-markdown-app requires Django 2.0 or later.
+
+==============  ===================
+Django version  django-markdown-app
+==============  ===================
+2.0 or later    0.9.4.1
+1.8 or later    0.9.3.1
+prior to 1.8    0.8.5.1
+==============  ===================
 
 
 Setup
@@ -70,7 +72,7 @@ Setup
 
 - Add django_markdown urls to base urls ::
 
-    url('^markdown/', include( 'django_markdown.urls')),
+    path('markdown/', include( 'django_markdown.urls')),
 
 
 Use django_markdown
@@ -119,7 +121,7 @@ Use django_markdown
     # Django admin
     admin.autodiscover()
     flatpages.register()
-    urlpatterns += [ url(r'^admin/', include(admin.site.urls)), ]
+    urlpatterns += [ path(r'admin/', admin.site.urls), ]
 
 
 #) Template tags: ::
@@ -165,12 +167,12 @@ Example: `settings.py` ::
 Examples
 ========
 
-Execute *make run* in sources directory. Open http://127.0.0.1:8000 in your
+Execute **make run** in sources directory. Open http://127.0.0.1:8000 in your
 browser. For admin access use 'root:root' credentials.
 
 
 Changes
--------
+=======
 
 Make sure you've read the changes_ document if you are upgrading from previous version.
 
@@ -213,11 +215,11 @@ Markitup_:
     http://markitup.jaysalvat.com/
 
 
-.. _GNU lesser general public license: http://www.gnu.org/copyleft/lesser.html
-.. _readthedocs: http://django-markdown-app.readthedocs.io
-.. _Markitup: http://markitup.jaysalvat.com/
+.. _GNU lesser general public license: https://www.gnu.org/copyleft/lesser.html
+.. _readthedocs: https://django-markdown-app.readthedocs.io
+.. _Markitup: https://markitup.jaysalvat.com/
 .. _github: https://github.com/sv0/django-markdown-app
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
 .. _markdown: https://python-markdown.github.io
-.. _changes: changes.html
+.. _changes: https://django-markdown-app.readthedocs.io/en/latest/changes.html
