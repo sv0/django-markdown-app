@@ -1,3 +1,8 @@
+2018-02-15  sv0
+	* Add Django 2.0 support.
+	* Remove Django 1.8-1.11 support.
+	* Version 0.9.4.1
+
 2017-10-17  rspeed
 
 	* Fix Content Security Policy compatibility by removing inline script.
