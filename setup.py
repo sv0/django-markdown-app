@@ -28,7 +28,8 @@ _license = re.search(r'^__license__\s*=\s*"(.*)"', _meta, re.M).group(1)
 _project = re.search(r'^__project__\s*=\s*"(.*)"', _meta, re.M).group(1)
 _version = re.search(r'^__version__\s*=\s*"(.*)"', _meta, re.M).group(1)
 
-download_url = "https://github.com/sv0/django-markdown-app/archive/%s.tar.gz" % _version
+download_url = "https://github.com/sv0/django-markdown-app/archive/%s.tar.gz" \
+               % _version
 
 install_requires = [l for l in _read('requirements.txt').split('\n')
                     if l and not l.startswith('#')]
