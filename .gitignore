@@ -16,5 +16,6 @@ todo.txt
 .coverage
 .tox/
 .cache/
+.pytest_cache/
 .eggs/
 django_markdown_app.egg-info/
