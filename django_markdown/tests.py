@@ -4,7 +4,7 @@ from django.template import Context, Template
 from django.test import TestCase
 
 from django_markdown.utils import markdown as markdown_util
-from django_markdown.templatetags.django_markdown import markdown as markdown_tag
+from django_markdown.templatetags.django_markdown import markdown as markdown_tag  # noqa
 from django_markdown.widgets import MarkdownWidget
 
 
@@ -18,7 +18,8 @@ class DjangoMarkdownTagsTest(TestCase):
 
         expected = ('<table>\n<thead>\n<tr>\n<th>header 1</th>\n'
                     '<th>header 2</th>\n</tr>\n</thead>\n<tbody>\n'
-                    '<tr>\n<td>data</td>\n<td>data</td>\n</tr>\n</tbody>\n</table>')
+                    '<tr>\n<td>data</td>\n<td>data</td>\n</tr>\n</tbody>\n'
+                    '</table>')
         self.assertEqual(html, expected)
 
 
@@ -95,9 +96,14 @@ class DjangoMarkdownWidgetTest(TestCase):
         """test MarkdownWidget.render"""
 
         form = forms.Form()
-        form.fields['test_field'] = forms.CharField(label='test', widget=MarkdownWidget)
+        form.fields['test_field'] = forms.CharField(
+            label='test',
+            widget=MarkdownWidget
+        )
 
-        template = Template('{% load django_markdown %}<html>{{ form }}</html>')
+        template = Template(
+            '{% load django_markdown %}<html>{{ form }}</html>'
+        )
         context = Context({'form': form})
         html = template.render(context)
 

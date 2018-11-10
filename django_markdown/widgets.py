@@ -42,14 +42,16 @@ class MarkdownWidget(forms.Textarea):
             'screen': (
                 os.path.join('django_markdown', 'skins',
                              settings.MARKDOWN_EDITOR_SKIN, 'style.css'),
-                os.path.join(settings.MARKDOWN_SET_PATH, settings.MARKDOWN_SET_NAME, 'style.css')
+                os.path.join(settings.MARKDOWN_SET_PATH,
+                             settings.MARKDOWN_SET_NAME, 'style.css')
             )
         }
 
         js = (
             os.path.join('django_markdown', 'jquery.init.js'),
             os.path.join('django_markdown', 'jquery.markitup.js'),
-            os.path.join(settings.MARKDOWN_SET_PATH, settings.MARKDOWN_SET_NAME, 'set.js'),
+            os.path.join(settings.MARKDOWN_SET_PATH,
+                         settings.MARKDOWN_SET_NAME, 'set.js'),
             os.path.join('django_markdown', 'editor.js')
         )
 

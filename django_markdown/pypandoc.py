@@ -13,18 +13,26 @@ __all__ = ['convert', 'get_pandoc_formats']
 def convert(source, to, format=None, extra_args=(), encoding='utf-8'):
     """Convert given `source` from `format` `to` another.
 
-    `source` may be either a file path or a string to be converted. It's possible to pass
-    `extra_args` if needed. In case `format` is not provided, it will try to invert the format
-    based on given `source`.
+    `source` may be either a file path or a string to be converted.
+    It's possible to pass `extra_args` if needed.  In case `format` is not
+    provided, it will try to invert the format based on given `source`.
 
-    Raises OSError if pandoc is not found! Make sure it has been installed and is available at
-    path.
+    Raises OSError if pandoc is not found! Make sure it has been installed and
+    is available at path.
 
     """
-    return _convert(_read_file, _process_file, source, to, format, extra_args, encoding=encoding)
+    return _convert(
+        _read_file, _process_file,
+        source, to,
+        format, extra_args,
+        encoding=encoding)
 
 
-def _convert(reader, processor, source, to, format=None, extra_args=(), encoding=None):
+def _convert(
+        reader, processor,
+        source, to,
+        format=None, extra_args=(),
+        encoding=None):
     source, format = reader(source, format, encoding=encoding)
 
     formats = {
@@ -48,7 +56,10 @@ def _convert(reader, processor, source, to, format=None, extra_args=(), encoding
             ', '.join(from_formats))
 
     if to not in to_formats:
-        raise RuntimeError('Invalid to format! Expected one of these: ' + ', '.join(to_formats))
+        raise RuntimeError(
+            'Invalid to format! Expected one of these: '
+            + ', '.join(to_formats)
+        )
 
     return processor(source, to, format, extra_args)
 
