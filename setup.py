@@ -44,7 +44,7 @@ setup(
     author="Kirill Klenov",
     author_email="horneds@gmail.com",
     maintainer="Slavik Svyrydiuk",
-    maintainer_email="svyrydiuk@gmail.com",
+    maintainer_email="slavik@svyrydiuk.eu",
     url="https://github.com/sv0/django-markdown-app",
     download_url=download_url,
 

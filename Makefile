@@ -12,11 +12,11 @@ help:
 .PHONY: clean
 # target: clean - Clean repo
 clean:
-	@rm -rf build dist docs/_build
+	@rm -rf build dist docs/_build django_markdown_app.egg-info
 	find $(CURDIR) -name "*.pyc" -delete
 	find $(CURDIR) -name "*.orig" -delete
 	find $(CURDIR) -name "__pycache__" | xargs rm -rf
-
+	find $(CURDIR) -name "django_markdown_app-?.?.?.dist-info" | xargs rm -rf
 
 # ==============
 #  Bump version
