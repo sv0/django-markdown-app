@@ -54,7 +54,7 @@ Starting with version 0.9.4.1, django-markdown-app requires Django 2.0 or later.
 ==============  ===================
 Django version  django-markdown-app
 ==============  ===================
-2.0 or later    0.9.4.1
+2.0 or later    0.9.5
 1.8 or later    0.9.3.1
 prior to 1.8    0.8.5.1
 ==============  ===================
