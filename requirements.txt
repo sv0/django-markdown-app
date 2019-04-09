@@ -1,2 +1,2 @@
-Django>=2.0,<2.2
+Django>=2.0,<=2.2
 markdown>=2.6.11
