@@ -3,11 +3,12 @@ language: python
 python:
 - "3.5"
 - "3.6"
+- "3.7"
 
 branches:
     only:
     - master
-#    - develop
+    - develop
 
 install: pip install tox-travis
 
