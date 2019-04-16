@@ -191,6 +191,8 @@ Contributing
 
 Development of django-markdown happens at github: https://github.com/sv0/django-markdown-app
 
+All changes should include tests, pass flake8_ and pass build on the TravisCI_
+
 
 Contributors
 ============
@@ -218,9 +220,11 @@ Markitup_:
 
 .. _GNU lesser general public license: https://www.gnu.org/copyleft/lesser.html
 .. _readthedocs: https://django-markdown-app.readthedocs.io
-.. _Markitup: https://markitup.jaysalvat.com/
+.. _Markitup: https://markitup.jaysalvat.com
 .. _github: https://github.com/sv0/django-markdown-app
 .. _klen: https://github.com/klen
 .. _yavorskiy: https://github.com/yavorskiy
 .. _markdown: https://python-markdown.github.io
 .. _changes: https://django-markdown-app.readthedocs.io/en/latest/changes.html
+.. _TravisCI: https://travis-ci.org/sv0/django-markdown-app
+.. _flake8: https://pypi.org/project/flake8
