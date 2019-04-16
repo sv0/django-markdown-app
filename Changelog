@@ -1,3 +1,7 @@
+2019-04-15  sv0
+	* Support Django 2.2
+	* Version 0.9.6
+
 2018-02-15  sv0
 	* Add Django 2.0 support.
 	* Remove Django 1.8-1.11 support.
