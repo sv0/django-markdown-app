@@ -1,21 +1,18 @@
-version: 2.1
-
-orbs:
-  python: circleci/python@0.2.1
+version: 2
 
 jobs:
-  build-and-test:
-    executor: python/default
-    steps:
-      - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
-      - run:
-          command: ./manage.py test
-          name: Test
+  toxify:
+      docker:
+        - image: python:3.6
+        - image: python:3.7
+
+      steps:
+        - checkout
+        - run: pip install tox && tox
 
 workflows:
-  main:
+  version: 2
+
+  django-markdown-app:
     jobs:
-      - build-and-test
+      - toxify

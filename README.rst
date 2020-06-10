@@ -10,9 +10,8 @@ Documentaton available at readthedocs_ or github_.
 
 .. _badges:
 
-.. image:: https://travis-ci.org/sv0/django-markdown-app.svg?branch=master
-    :target: https://travis-ci.org/sv0/django-markdown-app
-    :alt: Build Status
+.. image:: https://circleci.com/gh/sv0/django-markdown-app.svg?style=svg
+    :target: https://circleci.com/gh/sv0/django-markdown-app
 
 .. image:: https://coveralls.io/repos/github/sv0/django-markdown-app/badge.svg?branch=master
     :target: https://coveralls.io/github/sv0/django-markdown-app?branch=master
