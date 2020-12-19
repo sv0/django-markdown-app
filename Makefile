@@ -75,12 +75,12 @@ docs:
 
 
 $(VIRTUALENV): requirements.txt
-	[ -d $(VIRTUALENV) ] || virtualenv -p `which python3` --no-site-packages $(VIRTUALENV)
-	@$(VIRTUALENV)/bin/pip install -r requirements.txt
+	[ -d $(VIRTUALENV) ] || virtualenv -p `which python3` $(VIRTUALENV)
+	@$(VIRTUALENV)/bin/pip install --use-feature=2020-resolver -r requirements.txt
 	touch $(VIRTUALENV)
 
 $(VIRTUALENV)/bin/py.test: requirements-tests.txt $(VIRTUALENV)
-	@$(VIRTUALENV)/bin/pip install -r requirements-tests.txt
+	@$(VIRTUALENV)/bin/pip install --use-feature=2020-resolver -r requirements-tests.txt
 	touch $(VIRTUALENV)/bin/py.test
 
 .PHONY: t

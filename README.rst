@@ -32,7 +32,7 @@ Documentaton available at readthedocs_ or github_.
 Requirements
 ============
 
-- django >= 2.0, <3.0
+- django >= 2.0, <2.2
 - markdown >= 2.6.11
 
 
@@ -54,7 +54,7 @@ Starting with version 0.9.4.1, django-markdown-app requires Django 2.0 or later.
 ==============  ===================
 Django version  django-markdown-app
 ==============  ===================
-2.0 - 2.2       0.9.6
+2.0 - 2.1       0.9.6
 1.8 or later    0.9.3.1
 prior to 1.8    0.8.5.1
 ==============  ===================
