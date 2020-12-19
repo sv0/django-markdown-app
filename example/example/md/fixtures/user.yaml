@@ -1,4 +1,5 @@
-model: auth.user
+---
+- model: auth.user
   pk: 1
   fields:
     username: root
