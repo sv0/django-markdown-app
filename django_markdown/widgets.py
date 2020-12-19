@@ -22,10 +22,10 @@ class MarkdownWidget(forms.Textarea):
 
     """
 
-    def __init__(self, attrs={}):
+    def __init__(self, attrs=None):
         super(MarkdownWidget, self).__init__(attrs)
 
-    def render(self, name, value, attrs={}, renderer=None):
+    def render(self, name, value, attrs=None, renderer=None):
         """ Render widget.
 
         :returns: A rendered HTML
@@ -34,7 +34,6 @@ class MarkdownWidget(forms.Textarea):
         html = super(MarkdownWidget, self).render(name, value, attrs, renderer)
         attrs = self.build_attrs(attrs)
         html += editor_js_initialization("#%s" % attrs['id'])
-        print(html)
         return mark_safe(html)
 
     class Media:
@@ -48,11 +47,10 @@ class MarkdownWidget(forms.Textarea):
         }
 
         js = (
-            # 'xuyna/muyna.js',
             'admin/js/vendor/jquery/jquery.js',
-            'django_markdown/editor.js',
             'django_markdown/jquery.init.js',
             'django_markdown/jquery.markitup.js',
+            'django_markdown/editor.js',
             os.path.join(settings.MARKDOWN_SET_PATH,
                          settings.MARKDOWN_SET_NAME, 'set.js'),
         )

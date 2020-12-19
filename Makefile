@@ -75,11 +75,7 @@ docs:
 
 $(VIRTUALENV): requirements.txt
 	[ -d $(VIRTUALENV) ] || virtualenv -p `which python3` $(VIRTUALENV)
-<<<<<<< Updated upstream
 	@$(VIRTUALENV)/bin/pip install --use-feature=2020-resolver -r requirements.txt
-=======
-	@$(VIRTUALENV)/bin/pip install -r requirements.txt
->>>>>>> Stashed changes
 	touch $(VIRTUALENV)
 
 $(VIRTUALENV)/bin/py.test: requirements-tests.txt $(VIRTUALENV)
@@ -92,9 +88,9 @@ t: clean $(VIRTUALENV)/bin/py.test
 	@$(VIRTUALENV)/bin/py.test
 
 $(CURDIR)/example/db.sqlite3: $(VIRTUALENV)
-	$(VIRTUALENV)/bin/python example/manage.py migrate # --noinput
+	$(VIRTUALENV)/bin/python example/manage.py migrate --noinput
 	$(VIRTUALENV)/bin/python example/manage.py \
-		loaddata example/project/md/fixtures/initial_data.json
+		loaddata example/example/md/fixtures/user.yaml
 
 .PHONY: run
 run: $(CURDIR)/example/db.sqlite3
