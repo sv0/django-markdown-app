@@ -7,17 +7,17 @@
 
 {% block nav-global %}{% endblock %}
 
-{% block extrahead %}{{ block.super }}
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+{% block extrahead %}
+  {{ block.super }}
 {% endblock %}
 
 {% block content %}
-    <h2>Render form</h2>
-    {{ form.media }}
-    {{ form.as_ul }}
-    <h2>Render template tag</h2>
-    <textarea name="test" id="new"></textarea>
-    {% markdown_editor "#new" %}
-    {% markdown_media %}
+  <h2>Render form</h2>
+  <h3>Render template tag</h3>
+  {# form.media #}
+  {{ form.as_ul }}
+  <textarea name="test" id="new"></textarea>
+  {% markdown_editor "#new" %}
+  {% markdown_media %}
 {% endblock %}
 

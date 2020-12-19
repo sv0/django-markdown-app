@@ -10,8 +10,7 @@ from .utils import editor_js_initialization
 
 
 class MarkdownWidget(forms.Textarea):
-
-    """ Widget for a textarea.
+    """Widget for a textarea.
 
     Takes two additional optional keyword arguments:
 
@@ -23,10 +22,10 @@ class MarkdownWidget(forms.Textarea):
 
     """
 
-    def __init__(self, attrs=None):
+    def __init__(self, attrs={}):
         super(MarkdownWidget, self).__init__(attrs)
 
-    def render(self, name, value, attrs=None, renderer=None):
+    def render(self, name, value, attrs={}, renderer=None):
         """ Render widget.
 
         :returns: A rendered HTML
@@ -35,6 +34,7 @@ class MarkdownWidget(forms.Textarea):
         html = super(MarkdownWidget, self).render(name, value, attrs, renderer)
         attrs = self.build_attrs(attrs)
         html += editor_js_initialization("#%s" % attrs['id'])
+        print(html)
         return mark_safe(html)
 
     class Media:
@@ -48,15 +48,17 @@ class MarkdownWidget(forms.Textarea):
         }
 
         js = (
-            os.path.join('django_markdown', 'jquery.init.js'),
-            os.path.join('django_markdown', 'jquery.markitup.js'),
+            # 'xuyna/muyna.js',
+            'admin/js/vendor/jquery/jquery.js',
+            'django_markdown/editor.js',
+            'django_markdown/jquery.init.js',
+            'django_markdown/jquery.markitup.js',
             os.path.join(settings.MARKDOWN_SET_PATH,
                          settings.MARKDOWN_SET_NAME, 'set.js'),
-            os.path.join('django_markdown', 'editor.js')
         )
 
 
-class AdminMarkdownWidget(MarkdownWidget, AdminTextareaWidget):
+class AdminMarkdownWidget(AdminTextareaWidget, MarkdownWidget):
 
     """ Support markdown widget in Django Admin. """
 

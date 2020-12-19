@@ -1,4 +1,6 @@
-jQuery(function ($) {
+var jQuery = jQuery || django.jQuery;
+console.log(jQuery);
+(function ($) {
     $('script.markItUpEditorConfig').each(function (i, config_element) {
         var config = JSON.parse(config_element.textContent);
         $(config["selector"]).each(function (k, el) {
@@ -8,4 +10,4 @@ jQuery(function ($) {
             }
         });
     });
-});
+})(jQuery);
