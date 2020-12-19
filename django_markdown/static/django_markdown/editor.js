@@ -1,13 +1,11 @@
-var jQuery = jQuery || django.jQuery;
-console.log(jQuery);
-(function ($) {
-    $('script.markItUpEditorConfig').each(function (i, config_element) {
+django.jQuery( document ).ready(function () {
+    django.jQuery('.markItUpEditorConfig').each(function (i, config_element) {
         var config = JSON.parse(config_element.textContent);
-        $(config["selector"]).each(function (k, el) {
-            var el = $(el);
+        django.jQuery(config["selector"]).each(function (k, el) {
+            var el = django.jQuery(el);
             if(!el.hasClass("markItUpEditor")) {
                 el.markItUp(mySettings, config["extra_settings"]);
             }
         });
     });
-})(jQuery);
+});
