@@ -1,4 +1,4 @@
-Django-Markdown v. 0.9.6
+Django-Markdown v. 0.9.7
 ========================
 
 
@@ -32,7 +32,7 @@ Documentaton available at readthedocs_ or github_.
 Requirements
 ============
 
-- django >= 2.0, <2.2
+- django >= 2.0, <3.0
 - markdown >= 2.6.11
 
 
@@ -54,6 +54,7 @@ Starting with version 0.9.4.1, django-markdown-app requires Django 2.0 or later.
 ==============  ===================
 Django version  django-markdown-app
 ==============  ===================
+2.0 - 2.2       0.9.7
 2.0 - 2.1       0.9.6
 1.8 or later    0.9.3.1
 prior to 1.8    0.8.5.1
@@ -199,6 +200,8 @@ Contributors
 * klen_ (Kirill Klenov)
 
 * yavorskiy_ (Sergii Iavorskyi)
+
+* haard_ (Fredrik Håård)
 
 
 License

@@ -12,9 +12,23 @@ class MarkdownModelAdmin(admin.ModelAdmin):
 
     formfield_overrides = {MarkdownField: {'widget': AdminMarkdownWidget}}
 
+    class Media:
+        # Fix for jQuery issues in 2.2+
+        # @see https://docs.djangoproject.com/en/2.2/releases/2.2/#merging-of-form-media-assets
+        js = [
+            'admin/js/jquery.init.js',
+            'django_markdown/jquery.init.js',
+        ]
+
 
 class MarkdownInlineAdmin(admin.StackedInline):
 
     """ Support markdown as StackedInline. """
 
     formfield_overrides = {MarkdownField: {'widget': AdminMarkdownWidget}}
+
+    class Media:
+        js = [
+            'admin/js/jquery.init.js',
+            'django_markdown/jquery.init.js',
+        ]

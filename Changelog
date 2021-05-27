@@ -1,3 +1,8 @@
+2021-05-27  haard
+	* Support Django 2.2
+	* Modified ModelAdmins to include declaration of jQuery dependencies.
+	* Version 0.9.7
+
 2019-04-15  sv0
 	* Support Django 2.2
 	* Version 0.9.6
