@@ -14,7 +14,7 @@ class MarkdownModelAdmin(admin.ModelAdmin):
 
     class Media:
         # Fix for jQuery issues in 2.2+
-        # @see https://docs.djangoproject.com/en/2.2/releases/2.2/#merging-of-form-media-assets
+        # @see https://docs.djangoproject.com/en/2.2/releases/2.2/#merging-of-form-media-assets  # noqa
         js = [
             'admin/js/jquery.init.js',
             'django_markdown/jquery.init.js',
