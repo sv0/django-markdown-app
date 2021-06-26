@@ -1,7 +1,6 @@
 Django-Markdown v. 0.9.7
 ========================
 
-
 .. _description:
 
 **Django markdown** is django application that allows use markdown_ wysiwyg in flatpages, admin forms and other forms.
@@ -48,8 +47,6 @@ Installation
 
 Version compatibility
 =====================
-
-Starting with version 0.9.4.1, django-markdown-app requires Django 2.0 or later.
 
 ==============  ===================
 Django version  django-markdown-app
@@ -201,7 +198,7 @@ Contributors
 
 * yavorskiy_ (Sergii Iavorskyi)
 
-* haard_ (Fredrik Håård)
+* contributors_ (Other contributors)
 
 
 License
@@ -230,3 +227,4 @@ Markitup_:
 .. _changes: https://django-markdown-app.readthedocs.io/en/latest/changes.html
 .. _TravisCI: https://travis-ci.org/sv0/django-markdown-app
 .. _flake8: https://pypi.org/project/flake8
+.. _contributors: CONTRIBUTORS.rst

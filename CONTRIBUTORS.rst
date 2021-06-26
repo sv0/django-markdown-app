@@ -1,4 +1,5 @@
-Contributors:
+Contributors
+============
 
 * Kirill Klenov (https://github.com/klen)
 
@@ -20,3 +21,4 @@ Contributors:
 * Tom O'onnor' (https://github.com/tomoconnor)
 * Wellington Cordeiro (https://github.com/wldcordeiro)
 * dfeinzeig (https://github.com/dfeinzeig)
+* Fredrik Håård (https://github.com/haard)
