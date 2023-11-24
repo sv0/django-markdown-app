@@ -1,6 +1,5 @@
 MODULE=django_markdown
-VIRTUALENV=$(shell echo "$${VDIR:-'.env'}")
-
+VIRTUALENV=$(shell echo "$${VDIR:-'.venv'}")
 
 all: $(VIRTUALENV)
 
@@ -26,7 +25,7 @@ clean:
 VERSION?=minor
 # target: release - Bump version
 release:
-	@pip install bumpversion
+	@pip3 install bumpversion
 	@bumpversion $(VERSION)
 	@git checkout master
 	@git merge develop
@@ -53,20 +52,20 @@ major:
 .PHONY: register
 # target: register - Register module on PyPi
 register:
-	@python setup.py register
+	@python3 setup.py register
 
 .PHONY: upload
 # target: upload - Upload module on PyPi
 upload: clean docs
-	@pip install twine wheel
-	@python setup.py sdist bdist_wheel
+	@pip3 install twine wheel
+	@python3 setup.py sdist bdist_wheel
 	@twine upload dist/*
 
 .PHONY: docs
 # target: docs - Compile and upload docs
 docs:
-	@pip install sphinx sphinx-pypi-upload
-	@python setup.py build_sphinx --source-dir=docs/ --build-dir=docs/_build --all-files
+	@pip3 install sphinx sphinx-pypi-upload
+	@python3 setup.py build_sphinx --source-dir=docs/ --build-dir=docs/_build --all-files
 
 
 # =============
@@ -75,26 +74,26 @@ docs:
 
 
 $(VIRTUALENV): requirements.txt
-	[ -d $(VIRTUALENV) ] || virtualenv -p `which python3` $(VIRTUALENV)
-	@$(VIRTUALENV)/bin/pip install --use-feature=2020-resolver -r requirements.txt
+	[ -d $(VIRTUALENV) ] || python3 -m venv $(VIRTUALENV)
+	@$(VIRTUALENV)/bin/pip3 install -r requirements.txt
 	touch $(VIRTUALENV)
 
 $(VIRTUALENV)/bin/py.test: requirements-tests.txt $(VIRTUALENV)
-	@$(VIRTUALENV)/bin/pip install --use-feature=2020-resolver -r requirements-tests.txt
+	@$(VIRTUALENV)/bin/pip3 install -r requirements-tests.txt
 	touch $(VIRTUALENV)/bin/py.test
 
-.PHONY: t
-# target: t - Runs tests
-t: clean $(VIRTUALENV)/bin/py.test
+.PHONY: test
+# target: test - Runs tests
+test: clean $(VIRTUALENV)/bin/py.test
 	@$(VIRTUALENV)/bin/py.test
 
 $(CURDIR)/example/db.sqlite3: $(VIRTUALENV)
-	$(VIRTUALENV)/bin/python example/manage.py migrate --noinput
+	$(VIRTUALENV)/bin/python3 example/manage.py migrate --noinput
 
 .PHONY: run
 run: $(CURDIR)/example/db.sqlite3
-	$(VIRTUALENV)/bin/python example/manage.py runserver
+	$(VIRTUALENV)/bin/python3 example/manage.py runserver
 
 .PHONY: shell
 shell: $(CURDIR)/example/db.sqlite3
-	$(VIRTUALENV)/bin/python example/manage.py shell
+	$(VIRTUALENV)/bin/python3 example/manage.py shell
