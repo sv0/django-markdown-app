@@ -3,7 +3,7 @@ import markdown as markdown_module
 
 from django import VERSION
 from django.template import loader
-from django.utils.encoding import force_text
+from django.utils.encoding import force_str
 from django.utils.safestring import mark_safe
 
 from . import settings
@@ -35,7 +35,7 @@ def markdown(value, extensions=settings.MARKDOWN_EXTENSIONS,
 
     """
     return mark_safe(markdown_module.markdown(
-        force_text(value), extensions=extensions,
+        force_str(value), extensions=extensions,
         extension_configs=extension_configs, safe_mode=safe))
 
 
