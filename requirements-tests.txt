@@ -1,6 +1,6 @@
 -e .
 
-pytest==3.6
-pytest-django==3.6
+pytest==8.4.2
+pytest-django==4.11.1
 ipdb
 pylint
