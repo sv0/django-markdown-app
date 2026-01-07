@@ -1,4 +1,4 @@
-Django-Markdown v. 0.9.7
+Django-Markdown v. 0.9.7 [Archived]
 ========================
 
 .. _description:
